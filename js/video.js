@@ -16,16 +16,19 @@ document.querySelector("#pause").addEventListener("click", function() {
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
-	var curSpeed = video.playbackrate;
-	video.playbackRate = .9 * (curSpeed);
-	console.log("Current speed: " + curSpeed);	
+	var currentSpeed = video.playbackRate;
+	video.playbackRate = .9 * (currentSpeed);
+	console.log("Current speed: " + currentSpeed);
 });
 
+
 document.querySelector("#faster").addEventListener("click", function() {
-	var curSpeed = video.playbackrate;
-	video.playbackRate = (curSpeed) / .9;
-	console.log("Current speed: " + curSpeed);	
+	var currentSpeed = video.playbackRate;
+	video.playbackRate = (currentSpeed) / .9;
+	console.log("Current speed: " + currentSpeed);
 });
+
+
 
 document.querySelector("#skip").addEventListener("click", function() {
 	if(video.currentTime + 5 > video.duration){
